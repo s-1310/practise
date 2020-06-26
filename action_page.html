@@ -1,0 +1,31 @@
+<html>
+<body>
+<h3>you entered the following data:</h3><br>
+username: <?php echo $_POST["name"]; ?><br>
+Phone NO: <?php echo $_POST["pno"]; ?><br>
+Choice of course: <?php echo $_POST["co"]; ?><br>
+Description: <?php echo $_POST["desc"]; ?><br>
+<br>
+<?php
+
+$pyt= $_POST['python'];
+$java= $_POST['java'];
+$react= $_POST['react'];
+
+echo'The subjects you want to do are' . '<br>';
+if(isset($pyt)){
+echo 'Python'. '<br>';
+}
+if(isset($java)){
+echo 'Java'. '<br>';
+}
+if(isset($react)){
+echo 'React'. '<br>';
+}
+if((empty($pyt)) && (empty($java))
+&& (empty($react))){
+echo 'No checkbox selected';
+}
+?>
+</body>
+</html>
