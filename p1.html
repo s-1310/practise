@@ -1,0 +1,67 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <p>
+        <script></script>
+        </p>
+        <p id="demo"></p>
+        <script></script>
+        <table style="border: 1px solid black;">
+            <thead>
+                <th>Subject</th>
+                <th>Marks</th>
+            </thead>
+            <tbody style="border: 1px solid black;">
+                <tr>
+                    <td>Python</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>SQL</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total"><button onclick=" return getTotal()">click</button></td>
+                </tr>
+                <tr>
+                    <td>average</td>
+                    <td><script >getAvg()</script></td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="button" onclick="">
+        <script> 
+            var tbody  = document.getElementsByTagName('tbody')[0];
+            var total =0;
+            function getAvg(){
+
+                
+                return total/subno;
+            }
+
+            function getTotal(){
+                subno = tbody.rows.length -2;
+                for (var i=0; i < subno ;i++){
+                    total += Number(tbody.rows.item(i).cells.item(1).innerHTML);
+                }
+                document.getElementById('total').innerHTML=total
+            }
+            
+            var str = "The rain in Spain stays mainly in the plain";
+            var patt1 = /[a-z]+/i;
+
+            while (patt1.test(str)==true)  {
+            document.write("'words containing only alphabets: "+patt1.lastIndex);
+            document.write("<br>");
+            }  
+        </script>
+    </body>
+</html>
+
