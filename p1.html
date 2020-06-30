@@ -13,7 +13,7 @@
                 <th>Subject</th>
                 <th>Marks</th>
             </thead>
-            <tbody style="border: 1px solid black;">
+            <tbody style="border: 1px solid black; margin: 1px solid black;">
                 <tr>
                     <td>Python</td>
                     <td>75</td>
@@ -28,39 +28,37 @@
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td id="total"><button onclick=" return getTotal()">click</button></td>
+                    <td id="total"><button onclick="getTotal()">click</button></td>
                 </tr>
                 <tr>
                     <td>average</td>
-                    <td><script >getAvg()</script></td>
+                    <td id="avg"><button onclick="getAvg()">click</button></td>
                 </tr>
+                <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
             </tbody>
         </table>
-        <input type="button" onclick="">
-        <script> 
+        <!-- <input type="button" onclick=""> -->
+
+
+        <script type="text/javascript"> 
+           function getTotal(){
             var tbody  = document.getElementsByTagName('tbody')[0];
-            var total =0;
-            function getAvg(){
-
-                
-                return total/subno;
-            }
-
-            function getTotal(){
+               total = 0
                 subno = tbody.rows.length -2;
                 for (var i=0; i < subno ;i++){
                     total += Number(tbody.rows.item(i).cells.item(1).innerHTML);
                 }
-                document.getElementById('total').innerHTML=total
-            }
-            
-            var str = "The rain in Spain stays mainly in the plain";
-            var patt1 = /[a-z]+/i;
-
-            while (patt1.test(str)==true)  {
-            document.write("'words containing only alphabets: "+patt1.lastIndex);
-            document.write("<br>");
-            }  
+                return document.getElementById('total').innerHTML = total;
+           }
+           function getAvg(){
+            var tbody  = document.getElementsByTagName('tbody')[0];
+            total = 0
+                subno = tbody.rows.length -2;
+                for (var i=0; i < subno ;i++){
+                    total += Number(tbody.rows.item(i).cells.item(1).innerHTML);
+                }
+                return document.getElementById('avg').innerHTML = total/subno;
+           }
         </script>
     </body>
 </html>

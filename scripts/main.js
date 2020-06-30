@@ -9,10 +9,10 @@ document.getElementById('demo').innerHTML = String(l[3]);
 // var total =0;
 // function getAvg(){
 
-//     subno = tbody.rows.length -2;
-//     for (var i=0; i < subno ;i++){
-//         total += Number(tbody.rows.item(i).cells.item(1).innerHTML);
-//     }
+    // subno = tbody.rows.length -2;
+    // for (var i=0; i < subno ;i++){
+    //     total += Number(tbody.rows.item(i).cells.item(1).innerHTML);
+    // }
 //     return total/subno;
 // }
 
